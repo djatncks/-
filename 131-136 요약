@@ -1,5 +1,43 @@
 컴퓨터 네트워크 131-136 요약
 
+HTTP Methods
+1.	POST
+The POST method sends data to a server to create or update a resource. The data sent to the server is included in the body of the request.
+usage: Submitting forms, such as user registration or login.
+2.	GET
+The GET method requests data from a specified resource. It is used to retrieve data without causing any side effects on the server.
+usage: Fetching web pages or resources, such as images and documents.
+3.	PUT
+The PUT method updates a resource or creates a new resource if it doesn't already exist. It replaces the current representation of the resource with the uploaded data.
+usage: Updating existing data, such as modifying user profile information.
+4.	DELETE 
+ The DELETE method requests the server to delete a specified resource. It is idempotent, meaning multiple identical requests will not further affect the resource state.
+usage: Removing resources like user accounts, comments, or files from the server.
+
+
+HTTP Codes
+	
+1.	1xx(informational)
+These codes indicate that a request has been received and is being processed.
+usage: 100 Continue: Indicates that the initial part of the request has been received and the client can continue 
+with the rest of the request.
+2.	2xx(success)
+These codes indicate that the client's request was successfully received, understood, and accepted.
+usage: 200 OK: Request succeeded and the information is returned in the response.
+3.	3xx(redirection)
+These codes indicate that further action is needed to complete the request, typically involving redirection to a different URL.
+usage: 301 Moved Permanently: Requested object has been permanently moved;
+the new URL is specified in Location: header of the response message. The
+client software will automatically retrieve the new URL.
+4.	4xx(client error)
+These codes indicate that there was an error with the client's request.
+usage: 400 Bad Request: This is a generic error code indicating that the request
+could not be understood by the server.
+5.	5xx(server error)
+These codes indicate that the server failed to fulfill a valid request due to an error on the server side.
+usage: 505 HTTP Version Not Supported: The requested HTTP protocol version
+is not supported by the server.
+
 HTTP Request message 의 예시
 
 GET /somedir/page.html HTTP/1.1 --->request line 
