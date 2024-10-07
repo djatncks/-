@@ -1,0 +1,45 @@
+컴퓨터 네트워크 131-136 요약
+
+HTTP Request message 의 예시
+
+GET /somedir/page.html HTTP/1.1 --->request line 
+Host: www.someschool.edu ---> request header
+Connection: close
+User-agent: Mozilla/5.0
+Accept-language: fr
+
+---> request body
+
+request line 는 method field/URL field/HTTP version field 로 구성됨
+method field는 GET, POST, HEAD , PUT , DELETE 등 여러가지 값을 가질 수 있음.
+가장 빈도수가 높은 값은 GET 
+GET 메소드는 브라우저에 한 객체를 요구할 때 사용. 그 때 URL field 를 이용하여 객체를
+식별.
+
+request header
+Host : www.someschool.edu 는 객체가 있는 호스트를 지정.
+connection: close 는 서버와 지속적으로 연결되있는지를 나타냄.
+user-agent: Mozilla/5.0 요청한 클라이언트의 브라우저 타입을 나타냄.
+Accept-language:fr 클라이언트가 원하는 언어 타입을 나타냄.
+
+
+HTTP Response Message 의 예시
+
+HTTP/1.1 200 OK --->status line
+Connection: close ---> header lines
+Date: Tue, 18 Aug 2015 15:44:04 GMT
+Server: Apache/2.2.3 (CentOS)
+Last-Modified: Tue, 18 Aug 2015 15:11:03 GMT 
+Contest-length: 6821
+Content-Type: text/html
+
+(data data data data ...)---> entity body	
+
+
+status line 은 protocol version field/a status code/corresponding status code 
+로 구성됨
+
+header lines 
+connection: close 메세지를 보낸 후 TCP 연결을 끊었는지의 여부를 나타냄.
+Date: Tue ,18 Aug 2015... 응답이 생성되고 서버에서 전송된 시간을 나타냄. 주의할 점은 서버에서 처음 생성되거나 수정된 시간이 아님
+server: Apache/2.2.3 (CentOS) 해당 응답을 처리한 웹 서버 소프트웨어가 apache 2.2.3 버전이며, centOS 운영 체제에서 실행되고 있다는 정보를 나타냄
